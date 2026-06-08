@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenerativeAI, type Part } from "@google/generative-ai";
 import { GoogleAIFileManager } from "@google/generative-ai/server";
 import { access } from "node:fs/promises";
 import path from "node:path";
@@ -137,7 +137,7 @@ export async function POST(request: Request) {
     });
 
     const pdfUpload = await getOrUploadPdf(fileManager, subject);
-    const parts: Array<{ text?: string; fileData?: { fileUri: string; mimeType: string } }> = [];
+    const parts: Part[] = [];
 
     // PDF must come FIRST so the model treats it as primary context
     if (pdfUpload) {
@@ -154,9 +154,7 @@ export async function POST(request: Request) {
       parts.push({ text: `Student question: ${question}` });
     }
 
-    const response = await model.generateContent({
-      contents: [{ role: "user", parts }],
-    });
+    const response = await model.generateContent(parts);
 
     const answer = response.response?.text()?.trim();
 

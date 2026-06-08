@@ -1,6 +1,8 @@
 @import "tailwindcss";
 
 :root {
+  --font-sans: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --font-serif: Georgia, "Times New Roman", serif;
   --white: #f8fbff;
   --white-muted: #d7e4f4;
   --blue-100: #d8ebff;
@@ -34,7 +36,7 @@ body {
     radial-gradient(circle at 85% 0%, rgba(127, 192, 255, 0.14), transparent 26%),
     linear-gradient(180deg, #0a1526 0%, #050913 54%, #02060d 100%);
   color: var(--white);
-  font-family: var(--font-sans), "Space Grotesk", system-ui;
+  font-family: var(--font-sans);
   line-height: 1.5;
 }
 

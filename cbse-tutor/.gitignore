@@ -24,9 +24,9 @@
 .DS_Store
 *.pem
 
-# big files
-/all textbooks/*
-/cbse-tutor/public/*
+# local textbook dumps
+# Keep deployable reference PDFs in public/reference committed.
+/all textbooks/
 
 # debug
 npm-debug.log*
