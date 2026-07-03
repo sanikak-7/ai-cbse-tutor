@@ -88,14 +88,11 @@ export default function Home() {
   return (
     <main className="mx-auto flex max-w-4xl flex-col gap-10 text-white">
       <header className="rounded-3xl border border-sky-300/20 bg-white/95 p-8 shadow-[0_30px_80px_rgba(37,150,255,0.18)] backdrop-blur-lg">
-        <p className="font-serif text-sm uppercase tracking-[0.3em] text-sky-700">
-          Your AI Biology Coach
-        </p>
         <h1 className="mt-3 text-4xl font-semibold leading-tight text-slate-950 sm:text-5xl">
-          Master CBSE Biology with an AI tutor powered by your textbook
+          Your CBSE Biology & Chemistry Tutor
         </h1>
         <p className="mt-4 max-w-3xl text-base text-slate-700">
-          Ask questions at any difficulty level and get answers grounded in the official NCERT curriculum. Perfect for CBSE Grade 11-12 students.
+          Ask questions at any difficulty level and get answers grounded in the official NCERT curriculum. Made for CBSE Grade 11-12 students.
         </p>
       </header>
 
