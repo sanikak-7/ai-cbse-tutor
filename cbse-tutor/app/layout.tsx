@@ -3,7 +3,7 @@ import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "AI Biology Tutor - CBSE Edition",
+  title: "AI CBSE Biology & Chemistry Tutor",
   description:
     "Conversational AI tutor grounded in the CBSE senior-secondary biology syllabus.",
 };
